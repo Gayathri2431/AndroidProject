@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Instacount</string>
+    <string name="copyright">Copyright &#169; 2017 Visualogyx, Inc. All rights reserved</string>
+    <string name="google_maps_key">AIzaSyB252FJlk2elUfRKE6XzpqRTsx34Y4S_Vs</string>
+    <string name="one_camera_in_phone">Sorry, your phone has only one camera!</string>
+    <string name="error_in_sharing">Failed to share. Please try again later!</string>
+    <string name="ok">OK</string>
+    <string name="image_saved_on_device">Image saved on your device</string>
+    <string name="image_copied_to_clipboard">Image copied to your clipboard</string>
+    <string name="twitter_callback">http://www.cognitivemachines.co.in</string>
+    <string name="twitter_oauth_verifier">oauth_verifier</string>
+    <string name="photo_shared_on_facebook">Photo shared on your Facebook News Feeds!</string>
+    <string name="photo_shared_on_twiter">Photo shared on your Twitter tweets!</string>
+    <string name="failed_to_share">Failed to share. Please try again later!</string>
+    <string name="facebook_app_id">229861427450825</string>
+    <string name="not_full_permission">Can not grant permission fully!</string>
+</resources>

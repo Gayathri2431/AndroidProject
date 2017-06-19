@@ -1,0 +1,74 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
+group='com.github.Gayathri2431'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion '25.0.2'
+    defaultConfig {
+        minSdkVersion 17
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+
+        multiDexEnabled true
+
+        ndk {
+            abiFilters 'armeabi-v7a'
+        }
+
+        externalNativeBuild {
+            cmake {
+                cppFlags "-frtti -fexceptions"
+                arguments '-DANDROID_PLATFORM=android-21',
+                        '-DANDROID_TOOLCHAIN=clang', '-DANDROID_STL=gnustl_static'
+            }
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    dexOptions {
+        preDexLibraries = false
+        javaMaxHeapSize "4g"
+    }
+
+    externalNativeBuild {
+        cmake {
+
+            path "CMakeLists.txt"
+        }
+    }
+    sourceSets.main {
+        jni.srcDirs = []
+    }
+    packagingOptions {
+        exclude 'META-INF/LICENSE'
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    compile project(':openCVLibrary320')
+    compile files('libs/twitter4j-core-4.0.2.jar')
+    testCompile 'junit:junit:4.12'
+    compile 'com.mikhaellopez:circularimageview:3.0.2'
+    compile 'com.mikepenz:ionicons-typeface:2.0.1.2@aar'
+    compile 'com.mikepenz:iconics-core:2.8.1@aar'
+    compile 'com.mikepenz:fontawesome-typeface:4.6.0.3@aar'
+    compile 'com.github.toanvc:floatingactionmenu:0.8.9'
+    compile 'org.jcodec:jcodec-android:0.1.9'
+    compile 'com.google.android.gms:play-services-maps:10.0.1'
+    compile 'com.theartofdev.edmodo:android-image-cropper:2.4.6'
+    compile 'com.ryanharter.android.tooltips:library:0.0.3'
+    compile 'com.afollestad.material-dialogs:commons:0.9.0.1'
+    compile 'com.makeramen:roundedimageview:2.2.1'
+    compile 'com.facebook.android:facebook-android-sdk:4.+'
+}

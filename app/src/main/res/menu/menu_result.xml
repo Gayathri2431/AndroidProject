@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/done"
+        android:title=""
+        android:icon="@drawable/done"
+        app:showAsAction="always"
+        android:orderInCategory="0"/>
+
+    <item
+        android:id="@+id/recount"
+        android:title=""
+        android:icon="@drawable/refresh"
+        app:showAsAction="always"
+        android:orderInCategory="0"/>
+
+    <item
+        android:id="@+id/crop"
+        android:title=""
+        android:icon="@drawable/crop"
+        app:showAsAction="always"
+        android:orderInCategory="0"/>
+
+    <item
+        android:id="@+id/share"
+        android:title=""
+        android:icon="@drawable/share_white"
+        app:showAsAction="always"
+        android:orderInCategory="0"/>
+
+</menu>
