@@ -54,6 +54,14 @@ android {
     packagingOptions {
         exclude 'META-INF/LICENSE'
     }
+
+    defaultConfig {
+        externalNativeBuild {
+            cmake {
+                abiFilters 'armeabi', 'armeabi-v7a','arm64-v8a'
+            }
+        }
+    }
 }
 
 dependencies {
