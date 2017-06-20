@@ -607,7 +607,8 @@ public class CameraActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
+        return super.onOptionsItemSelected(item);
+        /*switch (item.getItemId()) {
             case android.R.id.home:
                 finish();
                 return true;
@@ -617,6 +618,6 @@ public class CameraActivity extends AppCompatActivity {
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
-        }
+        }*/
     }
 }

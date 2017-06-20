@@ -4,7 +4,7 @@ group='com.github.Gayathri2431'
 
 allprojects {
     tasks.withType(JavaCompile) {
-        options.compilerArgs << "-Xlint:deprecation"
+        options.deprecation = false
     }
 }
 

@@ -645,7 +645,8 @@ public class CameraResultActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
+        return super.onOptionsItemSelected(item);
+        /*switch (item.getItemId()) {
             case android.R.id.home:
                 Intent intent = new Intent(CameraResultActivity.this, CameraActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
@@ -681,7 +682,7 @@ public class CameraResultActivity extends AppCompatActivity {
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
-        }
+        }*/
     }
 
     @Override
